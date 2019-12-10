@@ -14,22 +14,27 @@ int main() {
 	for (i = 0; i < n; i++) cin >> arr[i];
 	for (i = 0; i < n; i++) cout << arr[i] << " ";
 	cout << endl;
-	for (i = 0; i < n-1; i++) {
+	for (i = 0; i < n - 1; i++) {
 		if (arr[i] == arr[i + 1]) {
-			NasMnogo++;
 			if (NasMnogo == 1) {
 				Perviy = i;
 				Posledniy = i;
 			}
 			else {
-				Posledniy = i;
+				Posledniy = i+1;
 			}
+			NasMnogo++;
 		}
-		else {
-			for (Perviy; Perviy < Posledniy + 1; Perviy ++) arr[Perviy] = 0;
+		else if (NasMnogo> l) {
+			for (Perviy; Perviy < Posledniy + 1; Perviy++) arr[Perviy] = 0;
+			NasMnogo = 1;
+		}
+		else
+		{
+			NasMnogo = 1;
 		}
 	}
-	for (i = 0; i < n; i++) cout << arr[i];
+	for (i = 0; i < n; i++) cout << arr[i] << " ";
 	cout << endl;
 	system("pause");
 	return 0;
