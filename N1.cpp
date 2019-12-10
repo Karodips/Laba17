@@ -17,7 +17,7 @@ int main() {
 	cout << endl;
 	for (i = 0; i < n-1; i++) {
 		if (arr[i] == arr[i + 1]) {
-			ZapolnyatelMassivaSerii = ZapolnyatelMassivaSerii + 1;
+			ZapolnyatelMassivaSerii ++;
 		}
 		else {
 			seriya[SchetSerii] = ZapolnyatelMassivaSerii;
@@ -26,9 +26,15 @@ int main() {
 		}
 		chisla[i] = arr[i];
 	}
+	if (arr[n - 1] == arr[n - 2]) {
+		seriya[SchetSerii] = ZapolnyatelMassivaSerii;
+	}
+	else {
+		seriya[SchetSerii] = 1;
+	}
 	chisla[n - 1] = arr[n - 1];
 	for (i = 0; i < n; i++) {
-		if (seriya[i] = 0) i = n;
+		if (seriya[i] == -842150451) break;
 		else cout << seriya[i] << " ";
 	}
 	cout << endl;
