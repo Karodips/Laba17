@@ -62,12 +62,14 @@ int main() {
 			 }
 			 NasMnogo = 1;
 			 i = -1;
+			 ZeroSaviour++;
 		 }
 		 else NasMnogo = 1;
 		}
 
 	 if (arr[n-1] == 0 && NasMnogo > l) {
 		 for (Perviy; Perviy < Posledniy + 1; Perviy++) n--;
+		 ZeroSaviour++;
 	 }
 	 for (i = 0; i < ZeroSaviour; i++) {
 		 n++;
